@@ -8,3 +8,6 @@
     <li><%= "Description: #{game.description}" %></li>
   <% end %>
 </ul>
+
+<%= link_to "back to #{@platform.name} games", platform_path(params[:platform_id]) %>
+<%= link_to 'all platforms', root_path %>
