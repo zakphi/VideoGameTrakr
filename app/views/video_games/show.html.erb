@@ -1,0 +1,8 @@
+<h1>video game single</h1>
+
+<% @video_game.each do |game| %>
+  <%= game.title %>
+  <%= game.platform.name %>
+  <%= game.release_date == nil ? 'TBA' : game.release_date %>
+  <%= game.description %>
+<% end %>
