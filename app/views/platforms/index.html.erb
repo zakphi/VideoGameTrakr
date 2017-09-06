@@ -1,0 +1,5 @@
+<h1>platforms</h1>
+
+<% @platforms.each do |platform| %>
+  <h2><%= link_to platform.name, platform_path(platform.id) %></h2>
+<% end %>
