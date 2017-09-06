@@ -4,6 +4,8 @@ class PlatformsController < ApplicationController
   end
 
   def show
+    @platform = Platform.find(params[:id])
+
     @video_games = VideoGame.where(platform_id: params[:id])
   end
 end
