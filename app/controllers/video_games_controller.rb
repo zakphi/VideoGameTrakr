@@ -9,4 +9,15 @@ class VideoGamesController < ApplicationController
     VideoGame.destroy(params['id'])
     redirect_to platform_path(@platform)
   end
+
+  def create
+    @platform = Platform.find(params[:platform_id])
+    game = params['video_game']
+    VideoGame.create!(title: game['title'],
+                platform: @platform,
+                release_date: game['release_date'],
+                description: game['description'])
+
+    redirect_to platform_path(@platform)
+  end
 end
