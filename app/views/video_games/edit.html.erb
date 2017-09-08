@@ -1,0 +1,12 @@
+<%= form_for :video_game, method: 'patch', url: {action: 'update'} do |f| %>
+  <%= label(:video_game, :title) %>
+  <%= f.text_field :title %>
+
+  <%= label(:video_game, :release_date) %>
+  <%= f.text_field :release_date %>
+
+  <%= label(:video_game, :description) %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
