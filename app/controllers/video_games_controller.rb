@@ -33,4 +33,8 @@ class VideoGamesController < ApplicationController
 
     redirect_to platform_video_game_path(@platform, @game)
   end
+
+  def edit
+    @game = VideoGame.find(params[:id])
+  end
 end
