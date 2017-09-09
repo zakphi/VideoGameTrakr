@@ -1,3 +1,5 @@
+<h1><%= "edit #{@game.title}" %></h1>
+
 <%= form_for :video_game, method: 'patch', url: {action: 'update'} do |f| %>
   <%= label(:video_game, :title) %>
   <%= f.text_field :title, :value => @game.title %>
