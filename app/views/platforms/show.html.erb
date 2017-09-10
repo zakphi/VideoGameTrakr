@@ -1,6 +1,7 @@
-<h1><%= @platform.name %> games</h1>
-
 <div class="<%= "#{@platform.name}-games" %>">
+
+  <h1><%= @platform.name %> games</h1>
+
   <ul>
     <% @video_games.each do |game| %>
       <li>
@@ -8,6 +9,7 @@
       </li>
     <% end %>
   </ul>
+
 </div>
 
 <%= link_to 'add video game', new_platform_video_game_path(params[:id]) %>
