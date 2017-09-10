@@ -52,3 +52,7 @@ ul{
 .playstation-games, .playstation-games a, .playstation-game{
   color: #003791;
 }
+
+input, label{
+  display: block;
+}
