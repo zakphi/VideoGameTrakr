@@ -1,10 +1,14 @@
-<h1><%= @video_game.title %></h1>
+<div class="<%= "#{@platform.name}-game" %>">
 
-<ul>
-  <li><%= "Platform: #{@video_game.platform.name}" %></li>
-  <li><%= "Release Date: #{@video_game.release_date == nil ? 'TBA' : @video_game.release_date}" %></li>
-  <li><%= "Description: #{@video_game.description}" %></li>
-</ul>
+  <h1><%= @video_game.title %></h1>
+
+  <ul>
+    <li><%= "Platform: #{@video_game.platform.name}" %></li>
+    <li><%= "Release Date: #{@video_game.release_date == nil ? 'TBA' : @video_game.release_date}" %></li>
+    <li><%= "Description: #{@video_game.description}" %></li>
+  </ul>
+
+</div>
 
 <%= link_to 'edit', edit_platform_video_game_path(@platform, @video_game), {:class => 'edit'} %>
 <%= link_to 'delete', platform_video_game_path(@platform, @video_game), {:class => 'delete', method: :delete} %>
