@@ -4,9 +4,7 @@
   <ul>
     <% @video_games.each do |game| %>
       <li>
-        <%= link_to game.title, platform_video_game_path(@platform, game) %> -
-        <%= link_to 'edit', edit_platform_video_game_path(@platform, game)%> -
-        <%= link_to 'delete', platform_video_game_path(@platform, game), method: :delete %>
+        <%= link_to game.title, platform_video_game_path(@platform, game) %>
       </li>
     <% end %>
   </ul>

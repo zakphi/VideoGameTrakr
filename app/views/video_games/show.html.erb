@@ -9,5 +9,8 @@
   <% end %>
 </ul>
 
+<%= link_to 'edit', edit_platform_video_game_path(@platform, @video_game), {:class => 'edit'} %>
+<%= link_to 'delete', platform_video_game_path(@platform, @video_game), {:class => 'delete', method: :delete} %>
+
 <%= link_to "back to #{@platform.name} games", platform_path(params[:platform_id]) %>
 <%= link_to 'all platforms', root_path %>
