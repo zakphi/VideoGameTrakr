@@ -18,10 +18,15 @@ a{
   text-decoration: none;
 }
 
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
 .xbox{
   color: #107c10;
   border: 2px solid #107c10;
-  padding: 2px 4px;
+  padding: 4px 10px;
 }
 
 .xbox:hover{
@@ -29,13 +34,21 @@ a{
   color: #f1f1f1;
 }
 
+.xbox-games, .xbox-games a, .xbox-game{
+  color: #107c10;
+}
+
 .playstation{
   color: #003791;
   border: 2px solid #003791;
-  padding: 2px 4px;
+  padding: 4px 10px;
 }
 
 .playstation:hover{
   background-color: #003791;
   color: #fff;
+}
+
+.playstation-games, .playstation-games a, .playstation-game{
+  color: #003791;
 }
