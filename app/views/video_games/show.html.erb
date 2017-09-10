@@ -1,7 +1,6 @@
-<h1>video game single</h1>
+<h1><%= @video_game.title %></h1>
 
 <ul>
-  <li><%= "Title: #{@video_game.title}" %></li>
   <li><%= "Platform: #{@video_game.platform.name}" %></li>
   <li><%= "Release Date: #{@video_game.release_date == nil ? 'TBA' : @video_game.release_date}" %></li>
   <li><%= "Description: #{@video_game.description}" %></li>
