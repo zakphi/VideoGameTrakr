@@ -1,14 +1,16 @@
 <h1><%= @platform.name %> games</h1>
 
-<ul>
-  <% @video_games.each do |game| %>
-    <li>
-      <%= link_to game.title, platform_video_game_path(@platform, game) %> - 
-      <%= link_to 'edit', edit_platform_video_game_path(@platform, game)%> -
-      <%= link_to 'delete', platform_video_game_path(@platform, game), method: :delete %>
-    </li>
-  <% end %>
-</ul>
+<div class="<%= "#{@platform.name}-games" %>">
+  <ul>
+    <% @video_games.each do |game| %>
+      <li>
+        <%= link_to game.title, platform_video_game_path(@platform, game) %> -
+        <%= link_to 'edit', edit_platform_video_game_path(@platform, game)%> -
+        <%= link_to 'delete', platform_video_game_path(@platform, game), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <%= link_to 'add video game', new_platform_video_game_path(params[:id]) %>
 
