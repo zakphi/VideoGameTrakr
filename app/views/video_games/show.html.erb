@@ -1,12 +1,10 @@
 <h1>video game single</h1>
 
 <ul>
-  <% @video_game.each do |game| %>
-    <li><%= "Title: #{game.title}" %></li>
-    <li><%= "Platform: #{game.platform.name}" %></li>
-    <li><%= "Release Date: #{game.release_date == nil ? 'TBA' : game.release_date}" %></li>
-    <li><%= "Description: #{game.description}" %></li>
-  <% end %>
+  <li><%= "Title: #{@video_game.title}" %></li>
+  <li><%= "Platform: #{@video_game.platform.name}" %></li>
+  <li><%= "Release Date: #{@video_game.release_date == nil ? 'TBA' : @video_game.release_date}" %></li>
+  <li><%= "Description: #{@video_game.description}" %></li>
 </ul>
 
 <%= link_to 'edit', edit_platform_video_game_path(@platform, @video_game), {:class => 'edit'} %>
